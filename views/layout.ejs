@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Utilizando o EJS</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <div id="container-menu">
+      <a href="/"><img src="/images/logo-branca.png" alt="Logo da Célula"></a> 
+    <nav>
+      <a class="nav-item" id="home-menu" href="#">Home</a>
+      <a class="nav-item" id="trabalhos-menu" href="#">Nossos&nbsp;trabalhos</a>
+      <a class="nav-item" id="conheca-menu" href="#">Conheça&nbsp;a&nbsp;Célula</a>
+      <a class="nav-item" id="fale-menu" href="#">Fale&nbsp;conosco</a>
+      <a class="nav-item" id="contact-menu" href="/guia">Guia de Métodos</a>
+      <div class="animation start-home"></div>
+    </nav>
+    </div>
+    
+  </header>  
+
+   <main>
+     <div class="container">
+      <%- body %>
+     </div>
+   </main>
+   
+  <footer>
+    EJS
+  </footer>
+  <!--jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!--Meu script-->
+  <script type="text/javascript" src="/js/animation-menu.js"></script>
+</body>
+</html>  
+

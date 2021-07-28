@@ -1,0 +1,32 @@
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
+    <h1>O Time!</h1>
+    <div class="row">
+        <!--usuario vai puxar de usuario(que no caso, vai receber o vetor users lá no server.js)-->
+        <% for (usuario of usuarios){%>
+            <div class="col-sm-4">
+                <h3><%= usuario.id %></h3>
+                <h2><%= usuario.name %></h2>           
+                <img class="img-responsive" style="height: 250px" src="<%= usuario.avatar %>">
+            </div>
+            <% } %>           
+    </div>
+    <div id="buttons-guia">
+        <input  type="button" value="Próximo" onclick="proximo()">
+        <input type="button" value="Voltar" onclick="voltar()">
+    </div>
+
+    <script type="text/javascript">
+        let valueId=1;
+
+        function proximo(){
+            valueId+=1;
+            console.log(valueId)
+        }
+
+        function voltar(){
+            valueId-=1;
+            console.log(valueId)
+        }
+    </script>
+</div>
